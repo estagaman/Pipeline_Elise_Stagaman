@@ -23,8 +23,8 @@ Command Line:
   -- Kallisto
   -- NCBI datasets tools
 
-Python Packages:
-  -- Biopython (version 1.83)
+Python Packages: \n
+  -- Biopython (version 1.83) \n
   -- Pandas (version 2.1.4)
   -- sys
   -- argparse
@@ -43,7 +43,7 @@ git clone https://github.com/estagaman/Pipeline_Elise_Stagaman.git
 cd Pipeline_Elise Stagaman
 ```
 
-###Running the Wrapper Script:
+### Running the Wrapper Script:
 Input flags:
   -m path to the metadata csv
   -d path to the directory containing paired-end fastq files
