@@ -23,11 +23,11 @@ Command Line:
   -- Kallisto
   -- NCBI datasets tools
 
-Python Packages: "\n"
-  -- Biopython (version 1.83) \n
-  -- Pandas (version 2.1.4)
-  -- sys
-  -- argparse
+Python Packages:  <br> 
+  -- Biopython (version 1.83)  <br> 
+  -- Pandas (version 2.1.4)  <br> 
+  -- sys  <br> 
+  -- argparse  <br> 
   -- os
   -- glob
 
