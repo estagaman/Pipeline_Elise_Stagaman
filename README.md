@@ -35,7 +35,7 @@ Before running the script, clone this repository and cd into it:
 ```
 git clone https://github.com/estagaman/Pipeline_Elise_Stagaman.git
 
-cd Pipeline_Elise Stagaman
+cd Pipeline_Elise_Stagaman
 ```
 
 ### Running the Wrapper Script:
