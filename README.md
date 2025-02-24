@@ -39,15 +39,15 @@ cd Pipeline_Elise_Stagaman
 ```
 
 ### Running the Wrapper Script:
-Input flags:
-  -m path to the metadata csv
-  -d path to the directory containing paired-end fastq files
+Input flags: <br>
+  -m path to the metadata csv <br>
+  -d path to the directory containing paired-end fastq files <br>
 
 ```
-#for running test data: 
+#for running your own data: 
 python3 wrapper_script.py -m <<metadata>> -d <<sample data>>
 
-#for running your own data:
+#for running test data:
 python3 wrapper_script.py -m sample_metadata.csv -d sample_data &
 ```
 
