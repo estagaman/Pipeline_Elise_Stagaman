@@ -1,10 +1,5 @@
 # A Pipeline to Analyze Paired-End Reads from HCMV Transcriptomes 
 
-## Where to Find Test Data: 
-Test data is in the folder test_data. It includes paired-end reads from samples SRR5660030, SRR5660033, SRR5660044, and SRR5660045. 
-
-Metadata for these samples is found in info_by_sample.txt. This tells you which samples are from which donors/patients. It also includes information on whether the sample was taken 2 or 6 days post-infection. 
-
 # Getting Started With the Pipeline:
 ## Step 1: Download all files in this repository to a directory on your local/remote machine
 ### Where to Find Test Data: 
@@ -14,25 +9,25 @@ Metadata for these samples is found in sample_metadata.csv. This includes the do
 
 ## Step 2: Make sure all dependencies are installed
 
-Command Line:
-  -- Python 
-  -- R
-  -- BLAST+
-  -- SPades
-  -- Bowtie2
-  -- Kallisto
-  -- NCBI datasets tools
+Command Line: <br>
+  -- Python <br>
+  -- R <br>
+  -- BLAST+ <br>
+  -- SPades <br>
+  -- Bowtie2 <br>
+  -- Kallisto <br>
+  -- NCBI datasets tools <br>
 
 Python Packages:  <br> 
   -- Biopython (version 1.83)  <br> 
   -- Pandas (version 2.1.4)  <br> 
   -- sys  <br> 
   -- argparse  <br> 
-  -- os
-  -- glob
+  -- os <br>
+  -- glob <br>
 
-R Packages: 
-  -- Sleuth
+R Packages: <br>
+  -- Sleuth <br>
 
 ## Step 3: Use the command line to run the wrapper script as follows: 
 
