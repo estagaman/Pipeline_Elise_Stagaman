@@ -1,6 +1,5 @@
 # A Pipeline to Analyze Paired-End Reads from HCMV Transcriptomes 
 
-# Getting Started With the Pipeline:
 ## Step 1: Download all files in this repository to a directory on your local/remote machine
 ### Where to Find Test Data: 
 Test data is in the folder sample_data. It includes paired-end reads from samples SRR5660030, SRR5660033, SRR5660044, and SRR5660045. Keep it together in the directory sample_data. You will use this directory as input for the wrapper script.
