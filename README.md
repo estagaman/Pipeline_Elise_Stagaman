@@ -1,7 +1,14 @@
 # A Pipeline to Analyze Paired-End Reads from HCMV Transcriptomes 
 
 ## Step 1: Download all files in this repository to a directory on your local/remote machine
-### Where to Find Test Data: 
+
+Before running the script, clone this repository and cd into it:
+```
+git clone https://github.com/estagaman/Pipeline_Elise_Stagaman.git
+
+cd Pipeline_Elise_Stagaman
+```
+
 Test data is in the folder sample_data. It includes paired-end reads from samples SRR5660030, SRR5660033, SRR5660044, and SRR5660045. Keep it together in the directory sample_data. You will use this directory as input for the wrapper script.
 
 Metadata for these samples is found in sample_metadata.csv. This includes the donor number for each sample and the condition (2 or 6 days post-infection). Metadata must include column "Sample", which specifies the sample name attached to our corresponding paired-end fastq files. If paired end fastq files are SRR5660044_1.fastq and SRR5660044_2.fastq, the "Sample" must be SRR5660044. Metadata also must include columns "Donor" and "Condition."
@@ -28,16 +35,8 @@ Python Packages:  <br>
 R Packages: <br>
   -- Sleuth <br>
 
-## Step 3: Use the command line to run the wrapper script as follows: 
+## Step 3: Use the command line to run the wrapper script 
 
-Before running the script, clone this repository and cd into it:
-```
-git clone https://github.com/estagaman/Pipeline_Elise_Stagaman.git
-
-cd Pipeline_Elise_Stagaman
-```
-
-### Running the Wrapper Script:
 Input flags: <br>
   -m path to the metadata csv <br>
   -d path to the directory containing paired-end fastq files <br>
