@@ -46,7 +46,7 @@ Input flags: <br>
 python3 wrapper_script.py -m <<metadata>> -d <<sample data>>
 
 #for running test data:
-python3 wrapper_script.py -m sample_metadata.csv -d sample_data &
+python3 wrapper_script.py -m sample_metadata.csv -d sample_data
 ```
 
 If you want to be able to exit the server while the script is running, use command: 
