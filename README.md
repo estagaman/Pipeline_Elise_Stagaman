@@ -54,3 +54,42 @@ If you want to be able to exit the server while the script is running, use comma
 ```
 nohup python3 wrapper_script.py -m sample_metadata.csv -d sample_data &
 ```
+
+
+## Other Helpful Information: 
+
+How to obtain data for this pipeline: 
+
+To get this test data, I followed these links to each SRA record 
+
+Donor 1 (2dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896360 
+Donor 1 (6dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896363 
+Donor 3 (2dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896374 
+Donor 3 (6dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896375
+
+From there look for the "run number" and click on it. Then go to the "data access" tab. 
+
+Under "SRA archive data," there should be a link to download data from this project next to "NCBI". Copy this link. 
+
+Next, open your terminal and enter the directory where you would like to perform your analysis (use cd). 
+
+Type the following command: 
+```
+wget <<"link">>
+
+#for SRR5660033 from sample data:
+wget "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR005/660/SRR5660033.sralite.1"
+```
+
+This will add a file titled SRR5660033 to your current directory. 
+
+From there, make a new directory to hold your paired-end fastq files use the fasterq-dump command to split it into forward and reverse fastq files. 
+
+```
+mdkir sample_data
+
+fasterq-dump SRR5660033 -O sample_data
+```
+Do this for all files you have downloaded from NCBI.
+
+
