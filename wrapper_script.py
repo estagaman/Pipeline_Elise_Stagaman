@@ -207,7 +207,7 @@ for i in range(2): #for each donor
 
     #add "complete genome" to the stitle instead of having it separate
     results['stitle'] = results['stitle'] + ", " + results['genome']
-    results = results.drop("genome", axis=1) 
+    results = results.drop("genome", axis=1)
 
     #add BLAST results for each donor to the log file
     with open("PipelineProject.log", "a") as file:
