@@ -16,6 +16,7 @@ def check_arg(args=None):
     help="fastq file directory",
     required=True)
     return parser.parse_args(args)
+
 #retrieve command line arguments 
 arguments = check_arg(sys.argv[1:]) #get the arguments that I inputted from the terminal
 metadata_csv = arguments.metadata #load metadata
@@ -46,13 +47,12 @@ os.system("efetch -db nuccore -id NC_006273.2 -format genbank > HCMV.gb") #get t
 cds_count = 0
 with open("HCMV_cds.fasta", 'w') as out_fasta: #open up a fasta file to write the CDS records to
     for record in SeqIO.parse("HCMV.gb", "genbank"): #parse the GenBank record
-        if record.features: #if there are features listed
-            for feature in record.features: #check each feature
-                if feature.type == "CDS": #find CDS
-                    cds_count += 1 #add 1 to our count of CDS sequences
+        for feature in record.features: #check each feature
+            if feature.type == "CDS": #find CDS
+                cds_count += 1 #add 1 to our count of CDS sequences
 
-                    #write the protein ID and sequence for that CDS to the fasta file
-                    out_fasta.write(">" + feature.qualifiers["protein_id"][0] + "\n" + str(feature.location.extract(record).seq) + "\n")
+                #write the protein ID and sequence for that CDS to the fasta file
+                out_fasta.write(">" + feature.qualifiers["protein_id"][0] + "\n" + str(feature.location.extract(record).seq) + "\n")
 
 #add the number of CDS sequences to the log file
 with open("PipelineProject.log", "w") as f:
@@ -208,6 +208,9 @@ for i in range(2): #for each donor
     #add "complete genome" to the stitle instead of having it separate
     results['stitle'] = results['stitle'] + ", " + results['genome']
     results = results.drop("genome", axis=1)
+
+    if len(results) > 10: #if there are more than 10 sequences in the results, keep only the top 10
+        results = results.head(10)
 
     #add BLAST results for each donor to the log file
     with open("PipelineProject.log", "a") as file:
